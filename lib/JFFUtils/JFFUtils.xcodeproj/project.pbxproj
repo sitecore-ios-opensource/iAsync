@@ -2610,7 +2610,7 @@
 				INFOPLIST_FILE = "JFFUtilsTest/JFFUtilsTest-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/untitled/projects/lib-third-party/JFFLibrary/frameworks",
+					../../frameworks,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -2665,7 +2665,7 @@
 				INFOPLIST_FILE = "JFFUtilsTest/JFFUtilsTest-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/untitled/projects/lib-third-party/JFFLibrary/frameworks",
+					../../frameworks,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2710,7 +2710,7 @@
 				INFOPLIST_FILE = "JFFUtilsTest/JFFUtilsTest-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/untitled/projects/lib-third-party/JFFLibrary/frameworks",
+					../../frameworks,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
