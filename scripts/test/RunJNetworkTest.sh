@@ -42,7 +42,7 @@ echo "-----Start Simulator-----"
 BUILT_PRODUCTS_DIR=$( cat /tmp/${APP_NAME}Build/PRODUCT_DIR.txt )
 cd "$BUILT_PRODUCTS_DIR/$CONFIGURATION-iphonesimulator"
 /bin/bash "$KILL_SIMULATOR"
-    iphonesim launch "$PWD/$APP_NAME.app" $IOS_VERSION 
+    ios-sim launch "$PWD/$APP_NAME.app" --sdk $IOS_VERSION 
 /bin/bash "$KILL_SIMULATOR"
 echo "-----Stopped Simulator-----"
 
