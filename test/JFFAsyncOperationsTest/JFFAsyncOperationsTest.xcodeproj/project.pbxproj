@@ -487,7 +487,7 @@
 		CE28A106161793F40029BE05 /* JFFUtilsTest.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = JFFUtilsTest.octest;
+			path = JFFUtilsTest.xctest;
 			remoteRef = CE28A105161793F40029BE05 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -616,7 +616,6 @@
 					../../lib/JFFTestTools,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

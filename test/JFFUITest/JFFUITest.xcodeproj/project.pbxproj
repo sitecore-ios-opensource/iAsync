@@ -444,7 +444,6 @@
 		538C140814A9F3200097645A /* libJFFUI copy.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			name = "libJFFUI copy.a";
 			path = "libJFFUI-clang.a";
 			remoteRef = 538C140714A9F3200097645A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -515,7 +514,7 @@
 		CED00076161989F000368E7D /* JFFUtilsTest.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = JFFUtilsTest.octest;
+			path = JFFUtilsTest.xctest;
 			remoteRef = CED00075161989F000368E7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -608,7 +607,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -641,7 +639,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

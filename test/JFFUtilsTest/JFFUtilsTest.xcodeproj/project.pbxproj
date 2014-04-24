@@ -227,7 +227,7 @@
 				1B61C41C14A2065800542F46 /* libJFFUtilsMacOS.a */,
 				534CDFD414A8C7E00068F4DF /* libJFFUtils-clang.a */,
 				6515B960152B726E00518996 /* JFFUtilsFW.framework */,
-				CE444A3F160860B500DD85B0 /* JFFUtilsTest.octest */,
+				CE444A3F160860B500DD85B0 /* JFFUtilsTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 			remoteRef = B69484641429E24B00B8247E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CE444A3F160860B500DD85B0 /* JFFUtilsTest.octest */ = {
+		CE444A3F160860B500DD85B0 /* JFFUtilsTest.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = JFFUtilsTest.xctest;
@@ -409,7 +409,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
@@ -442,7 +441,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
