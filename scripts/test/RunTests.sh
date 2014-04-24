@@ -25,25 +25,28 @@ rm -rf "$PROJECT_ROOT/deployment"
 mkdir -p "$PROJECT_ROOT/deployment/test-results"
 
 /bin/bash "$SCRIPTS_ROOT_DIR/simulator/CleanTestReports.sh"
-$LAUNCH_SIMULATOR_WITHOUT_APP
+    $LAUNCH_SIMULATOR_WITHOUT_APP
     /bin/bash "$PWD/RunJUiTest.sh" "$IOS_VERSION" "$CONFIGURATION"
     if [ "$?" -ne "0" ]; then 
        echo "[!!! ERROR !!!] : JFFUtilsTest.sh failed"
        exit 1
     fi
     
+	$LAUNCH_SIMULATOR_WITHOUT_APP
     /bin/bash "$PWD/RunJUtilsTest.sh" "$IOS_VERSION" "$CONFIGURATION"
     if [ "$?" -ne "0" ]; then 
        echo "[!!! ERROR !!!] : JFFUtilsTest.sh failed"
        exit 1
     fi
 
+	$LAUNCH_SIMULATOR_WITHOUT_APP
     /bin/bash "$PWD/RunJNetworkTest.sh" "$IOS_VERSION" "$CONFIGURATION"
     if [ "$?" -ne "0" ]; then 
        echo "[!!! ERROR !!!] : RunJNetworkTest.sh failed"
        exit 1
     fi
     
+	$LAUNCH_SIMULATOR_WITHOUT_APP
     /bin/bash "$PWD/RunJAsyncTest.sh" "$IOS_VERSION" "$CONFIGURATION"
     if [ "$?" -ne "0" ]; then 
        echo "[!!! ERROR !!!] : RunJAsyncTest.sh failed"
