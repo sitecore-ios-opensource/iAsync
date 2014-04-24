@@ -14,6 +14,7 @@ cd ../../
 cd "$LAUNCH_DIR"
 
 GCOVR=$SCRIPTS_ROOT_DIR/gcovr
+LAUNCH_SIMULATOR_WITHOUT_APP="/usr/local/bin/ios-sim start"
 
 # IOS_VERSION=5.1
 CONFIGURATION=Debug
@@ -24,6 +25,7 @@ rm -rf "$PROJECT_ROOT/deployment"
 mkdir -p "$PROJECT_ROOT/deployment/test-results"
 
 /bin/bash "$SCRIPTS_ROOT_DIR/simulator/CleanTestReports.sh"
+$LAUNCH_SIMULATOR_WITHOUT_APP
     /bin/bash "$PWD/RunJUiTest.sh" "$IOS_VERSION" "$CONFIGURATION"
     if [ "$?" -ne "0" ]; then 
        echo "[!!! ERROR !!!] : JFFUtilsTest.sh failed"
