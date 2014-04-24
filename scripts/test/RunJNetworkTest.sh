@@ -18,8 +18,10 @@ echo IOS_VERSION - $IOS_VERSION
 cd ../
     SCRIPTS_ROOT=$PWD
 cd "$LAUNCH_DIR"
-KILL_SIMULATOR=$SCRIPTS_ROOT/simulator/KillSimulator.sh
 
+KILL_SIMULATOR=$SCRIPTS_ROOT/simulator/KillSimulator.sh
+LAUNCH_SIMULATOR=/usr/local/bin/ios-sim launch
+LAUNCH_SIMULATOR_IOS_VERSION=--sdk $IOS_VERSION
 
 cd ../../
     PROJECT_ROOT=$PWD
@@ -42,7 +44,7 @@ echo "-----Start Simulator-----"
 BUILT_PRODUCTS_DIR=$( cat /tmp/${APP_NAME}Build/PRODUCT_DIR.txt )
 cd "$BUILT_PRODUCTS_DIR/$CONFIGURATION-iphonesimulator"
 /bin/bash "$KILL_SIMULATOR"
-    ios-sim launch "$PWD/$APP_NAME.app" --sdk $IOS_VERSION 
+    $LAUNCH_SIMULATOR "$PWD/$APP_NAME.app" $LAUNCH_SIMULATOR_IOS_VERSION
 /bin/bash "$KILL_SIMULATOR"
 echo "-----Stopped Simulator-----"
 

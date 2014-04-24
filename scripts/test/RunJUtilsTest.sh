@@ -26,6 +26,12 @@ cd "$LAUNCH_DIR"
 cd "$PROJECT_ROOT/test/$APP_NAME"
 pwd
 
+
+KILL_SIMULATOR=$SCRIPTS_ROOT/simulator/KillSimulator.sh
+LAUNCH_SIMULATOR=/usr/local/bin/ios-sim launch
+LAUNCH_SIMULATOR_IOS_VERSION=--sdk $IOS_VERSION
+
+
 xcodebuild -project $APP_NAME.xcodeproj -alltargets -configuration $CONFIGURATION -sdk iphonesimulator$IOS_VERSION clean build
 if [ "$?" -ne "0" ]; then
    echo "[!!! ERROR !!!] : Build failed"
@@ -36,9 +42,9 @@ fi
 echo "-----Start Simulator-----"
 BUILT_PRODUCTS_DIR=$( cat /tmp/${APP_NAME}Build/PRODUCT_DIR.txt )
 cd "$BUILT_PRODUCTS_DIR/$CONFIGURATION-iphonesimulator"
-/bin/bash "$SCRIPTS_ROOT_DIR/simulator/KillSimulator.sh"
-    ios-sim launch "$PWD/$APP_NAME.app" --sdk $IOS_VERSION 
-/bin/bash "$SCRIPTS_ROOT_DIR/simulator/KillSimulator.sh"
+/bin/bash "$KILL_SIMULATOR"
+    $LAUNCH_SIMULATOR "$PWD/$APP_NAME.app" $LAUNCH_SIMULATOR_IOS_VERSION
+/bin/bash "$KILL_SIMULATOR"
 echo "-----Stopped Simulator-----"
 
 cd "$LAUNCH_DIR"
