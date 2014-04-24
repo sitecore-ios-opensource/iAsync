@@ -19,9 +19,17 @@ cd ../
     SCRIPTS_ROOT_DIR=$PWD
 cd "$LAUNCH_DIR"
 
+
+
 KILL_SIMULATOR=$SCRIPTS_ROOT_DIR/simulator/KillSimulator.sh
-LAUNCH_SIMULATOR=/usr/local/bin/ios-sim launch
-LAUNCH_SIMULATOR_IOS_VERSION=--sdk $IOS_VERSION
+LAUNCH_SIMULATOR="/usr/local/bin/ios-sim launch"
+if [ -n "$IOS_VERSION" ]; then
+    LAUNCH_SIMULATOR_IOS_VERSION="--sdk $IOS_VERSION"
+else
+	LAUNCH_SIMULATOR_IOS_VERSION=""
+fi
+
+
 
 cd ../../
     PROJECT_ROOT=$PWD
